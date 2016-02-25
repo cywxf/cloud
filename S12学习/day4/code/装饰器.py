@@ -147,7 +147,7 @@ def call_func(f):
 
 
 # 在另一个func.py模块中，写下了这样的代码：
-import foo
+# import foo
 
 filename = "func.py"
 
@@ -165,7 +165,7 @@ if __name__ == "__name__":
 # 而对于嵌套函数,这一机制则会表现的更加明显：闭包将会捕捉内层函数执行所需的整个环境:
 
 # enclosed.py
-import foo
+# import foo
 def wrapper():
     fileename ="enclosed.py"
     def show_filename():
@@ -173,11 +173,7 @@ def wrapper():
     print(foo.call_func(show_filename))    # 输出:filename:enclosed.py
 
 # 实际上，每一个函数对象，都有一个指向了该函数定义时所在全局名称空间的__globals__属性：
-著作权归作者所有。
-商业转载请联系作者获得授权，非商业转载请注明出处。
-作者：陈伟
-链接：https://www.zhihu.com/question/25950466/answer/31731502
-来源：知乎
+
 '''
 #show_filename inside wrapper
 #show_filename.__globals__
@@ -206,4 +202,10 @@ def wrapper():
 
 # 装饰器&语法糖（syntax sugar）
 # 那么闭包和装饰器又有什么关系呢？
-# 上问题到闭包的重要特性：封存上下文，这一特可以巧妙的被用于现有函数的包装，从而为现有函数更加功能。而这就是装饰器。
+# 上文提到闭包的重要特性：封存上下文，这一特可以巧妙的被用于现有函数的包装，从而为现有函数更加功能。而这就是装饰器。
+# 还是举个例子，代码如下
+#alist = [1, 2, 3, ..., 100]  --> 1+2+3+...+100 = 5050
+# def lazy_sum():
+#     return reduce(lambda x,y:x+y,alist)
+# alist= range(1,101)
+

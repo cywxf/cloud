@@ -1,6 +1,17 @@
 # /usr/bin/env python
 # -*- coding:utf-8 -*-
 
+
+
+# split分割字符串，字符串操作，由字符串分割成的列表
+a = 'zhangsan lisi zhaowu'
+print(a.strip().split()[0])  # 分割字符串，已空格开始分割
+print(a.strip().split()[1])  # 分割字符串，已空格开始分割
+print(a.strip().split()[2])  # 分割字符串，已空格开始分割
+print(type(a),len(a))   #查看类型，长度
+# strip()Python中的strip函数用于去除字符串的首尾字符串，他的姊妹函数,lstrip()用于去除左边的字符，rstrip()用于去除右边的字符
+s = " abcde "
+print(s.strip()) #去除首位的空格
 # 写入文件
 """
 f = open('test.log', 'w')
