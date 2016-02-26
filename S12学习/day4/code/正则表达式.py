@@ -45,14 +45,18 @@ p = re.search('\d+',"2390muming902_~ngx!")
 p = re.search('^\d+$',"13800138000")
 if p:
     print(p.group())
-
 # sub 替换
 # 把所有的数字替换为#
 s = re.sub('\d+',"/","23maum2in12g90ad2_~2ng3x!")
-# 如果后面的不想替换,只想替换前面两个,后面加count=2
+# 替换数字,如果后面的不想替换,只想替换前面两个,后面加count=2
 s = re.sub('\d+',"/","23maum2in12g90ad2_~2ng3x!",count=2)
 if s:
     print(s)
 #  |是或者的意思
 j = re.search("\(.*[\d|\+|\-|*|/|%].*\)","20 * 2 - (9 + 1 * 2 - (29 - 8 / 7)*88/9**8)")
 print(j.group())
+# 可以匹配到a到s的数据,中间用点表示
+print(re.findall('a.s','abs'))
+# ^去开始匹配,如果hello在后面是匹配不到的
+print(re.findall('^hello','helloadjkadjka'))
+
