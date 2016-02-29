@@ -1,7 +1,10 @@
 # /usr/bin/env python
 # coding=utf-8
 
-
+# fun()  fun带参数是传参数,函数调用
+# fun   不带括号是存放在内存中方法,不能调用
+# return func不加括号是方法
+# return func()加括号是求返回值
 # 函数
 # def 是关键字，下面的都是函数
 # def mail()  函数名(參數）
