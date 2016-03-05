@@ -143,3 +143,21 @@ for r_index,row in enumerate(data):
         data[r_index][c_index] = tmp
     print(10 * '--')
     for r in data:print(r)
+
+
+
+# 冒泡排序
+# 将一个不规则的数组按从小达到的顺序进行排序
+data = [1, 10, 4, 22, 33, 21, 54, 3, 85, 5, 22, 2, 18, 13, 12]
+
+print("before sort", data)
+previous = data[0]
+for j in range(len(data)):
+    tmp = 0
+    for i in range(len(data) - 1):
+        if data[i] > data[i + 1]:
+            tmp = data[i]
+            data[i] = data[i + 1]
+            data[i + 1] = tmp
+    print(data)
+print("after sort:", data)
