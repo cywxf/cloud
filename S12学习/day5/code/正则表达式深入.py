@@ -132,7 +132,8 @@ m = re.search("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}",ip_addr)
 print(m.group())
 # 分组匹配地址
 contactInfo = "Oldboy school, Beijing Changping Shahe: 010-8343245"
-ma = re.search('(\w+),(\w+):(\S+) ', contactInfo)   # 分组
-print(ma.group())
+match = re.search('(\w+),(\w+):(\S+) ', contactInfo)   # 分组
+print(match.group())
 
-match = re.search(r'(?P<last>\w+'),
+match = re.search(r'(?P<last>\w+),(?P<first>\w):(?P<phone>\S+)',contactInfo)
+
