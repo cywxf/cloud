@@ -58,16 +58,10 @@ def invert_dict(d):
             inverse[val] = [key]
     print(inverse)
 
+a = {'k1': 'v1', 'k2': 'v2', 'k3': 'v3'}
+invert_dict(a)
 
-# a = {'k1':'v1','k2':'v2','k3':'v3'}
-def dict_fun():
-    questions = ['name','quest','fovorite']
-    answers =['lancelot','the holy grail','blue']
-    for q,a in zip(questions,answers):
-        print(q,a)
-# dict_fun()
 # 使用enumerate生成索引位置和对应值
 for i, v in enumerate(['hello', 'world', 'test']):
     print(i,v)
 
-invert_dict(dict_fun())
